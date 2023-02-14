@@ -4,11 +4,11 @@ from pathlib import Path
 import streamlit_authenticator as stauth
 import yaml
 from yaml import SafeLoader
-from views import main,import_data
+from app import import_data
+from views import main
 # //////////////////////// user authentication 
 
 st.set_page_config(page_title="Data analysis", page_icon=":bar_chart:", layout="wide")
-
 
 with open('config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
