@@ -9,7 +9,6 @@ from app import import_data,main
 
 
 if __name__ == '__main__':
-
     st.set_page_config(page_title="Data analysis", page_icon=":bar_chart:", layout="wide")
 
     with open('config.yaml') as file:
