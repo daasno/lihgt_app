@@ -5,8 +5,8 @@ import streamlit_authenticator as stauth
 import streamlit as st
 import yaml
 from yaml import SafeLoader
-from app import import_data,main
-
+import main
+import import_data
 
 if __name__ == '__main__':
     st.set_page_config(page_title="Data analysis", page_icon=":bar_chart:", layout="wide")
