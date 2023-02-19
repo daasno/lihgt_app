@@ -1,1 +1,1 @@
-web:gunicorn run Myapp.py
+web: streamlit run Myapp.py
