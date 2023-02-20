@@ -25,13 +25,13 @@ def creatpage():
     @st.cache
     def get_data():
         # data preprocessing
-        sales=pd.read_csv('./data/sales.csv')
+        sales=pd.read_csv('data/sales.csv')
         sales['Date de validation']=pd.to_datetime(
                 sales['Date de validation'].apply(clean_vente),
                 format='%Y-%m-%d')
         sales.drop_duplicates(inplace=True)
 
-        mycig=pd.read_csv('./data/Product.csv')\
+        mycig=pd.read_csv('data/Product.csv')\
                         .drop_duplicates()
 
         
