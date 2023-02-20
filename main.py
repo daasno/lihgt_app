@@ -8,10 +8,10 @@ import seaborn as sns
 import plotly.graph_objects as go
 from itertools import chain
 # from statsmodels.tsa.arima_model import ARIMA
-from pmdarima.arima import auto_arima
+# from pmdarima.arima import auto_arima
 import pickle
 from pathlib import Path
-import streamlit_authenticator as stauth
+# import streamlit_authenticator as stauth
 import yaml
 from yaml import SafeLoader
 

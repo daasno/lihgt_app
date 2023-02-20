@@ -8,7 +8,7 @@ def creatpage():
         Product['IdPro']=(Product['id'].astype(str)+Product['id decl'].astype(str)).astype('Int64')
         Product.drop_duplicates('IdPro',inplace=True)
         # ======save the data====
-        Product.to_csv('./data/product.csv',index=False)
+        Product.to_csv('data/product.csv',index=False)
 
     data=st.file_uploader(label='importer les données des ventes')
     if data: 
@@ -21,7 +21,7 @@ def creatpage():
         clean_data=sales[~condition]
         dirty_data=sales[condition]
         dirty_data['Vente']=dirty_data['Vente'].str.replace('"',"|")
-        with open('./data/month_sales.csv','w',newline='') as fout:
+        with open('data/month_sales.csv','w',newline='') as fout:
             writer = csv.writer(fout)
             writer.writerow(dirty_data.columns)
             for d in dirty_data['Vente'].values:
