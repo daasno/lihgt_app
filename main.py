@@ -8,7 +8,7 @@ import seaborn as sns
 import plotly.graph_objects as go
 from itertools import chain
 # from statsmodels.tsa.arima_model import ARIMA
-# from pmdarima.arima import auto_arima
+from pmdarima.arima import auto_arima
 import pickle
 from pathlib import Path
 # import streamlit_authenticator as stauth
@@ -25,13 +25,13 @@ def creatpage():
     @st.cache
     def get_data():
         # data preprocessing
-        sales=pd.read_csv('data/sales.csv')
+        sales=pd.read_csv('sales.csv')
         sales['Date de validation']=pd.to_datetime(
                 sales['Date de validation'].apply(clean_vente),
                 format='%Y-%m-%d')
         sales.drop_duplicates(inplace=True)
 
-        mycig=pd.read_csv('data/Product.csv')\
+        mycig=pd.read_csv('Product.csv')\
                         .drop_duplicates()
 
         
