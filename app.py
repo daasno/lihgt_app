@@ -4,9 +4,7 @@ from pathlib import Path
 import streamlit as st
 import yaml
 from yaml import SafeLoader
-import main
 import csv
-import import_data
 import streamlit as st
 import pandas as pd
 import numpy as np
