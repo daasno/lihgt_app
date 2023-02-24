@@ -27,7 +27,7 @@ def import_data():
     data_product=st.file_uploader(label='importer les données de stock et de produit')
     if data_product:
         Product=pd.read_csv(data_product)
-        Product['IdPro']=(Product['id'].astype(str)+Product['id decl'].astype(str)).astype('Int64')
+        Product['IdPro']=(Product['id'].astype(str)+Product['id decl'].astype(str)).astype(int)
         Product.drop_duplicates('IdPro',inplace=True)
         # ======save the data====
         Product.to_csv('product.csv',index=False)
